@@ -12,6 +12,7 @@ Pong.Preload.prototype = {
     this.load.image('centerLine', 'assets/images/centerLine.png');
     this.load.image('ball', 'assets/images/ball.png');
     this.load.image('paddle.png', 'assets/images/paddle.png');
+    this.load.bitmapFont('scoreFont', 'assets/fonts/score64.png', 'assets/fonts/score64.fnt');
 
     this.time.advancedTiming = true;
 

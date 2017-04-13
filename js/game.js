@@ -13,11 +13,18 @@ Pong.Game.prototype = {
     var topWall = this.wallGroup.create(0, 0, 'wall');
     topWall.anchor.set(0, 0.5);
     
-    var bottomWall = this.wallGroup.create(0, this.game.world.height, 'wall');
+    var bottomWall = this.wallGroup.create(0, this.world.height, 'wall');
     bottomWall.anchor.set(0, 0.5);
 
-    var centerLine = this.add.sprite(this.game.world.centerX, 0, 'centerLine');
-    centerLine.anchor.set(0.5, 0);  
+    var centerLine = this.add.sprite(this.world.centerX, 0, 'centerLine');
+    centerLine.anchor.set(0.5, 0);
+
+    
+    this.leftScore = this.add.bitmapText(this.world.centerX - 20, 24, 'scoreFont', '0', 64);
+    this.leftScore.anchor.set(1, 0);
+    
+    this.rightScore = this.add.bitmapText(this.world.centerX + 20, 24, 'scoreFont', '0', 64);
+    
   },
 
   update: function ()
