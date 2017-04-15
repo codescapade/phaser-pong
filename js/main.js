@@ -1,7 +1,10 @@
+
 window.onload = function ()
 {
-  var game = new Phaser.Game(640, 480, Phaser.CANVAS, 'gameContainer');
+  // setup the game
+  var game = new Phaser.Game(640, 480, Phaser.AUTO, 'gameContainer');
 
+  // add all the game states
   game.state.add('boot', Pong.Boot);
   game.state.add('preload', Pong.Preload);
   game.state.add('menu', Pong.Menu);

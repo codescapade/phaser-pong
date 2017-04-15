@@ -9,9 +9,12 @@ Pong.Menu.prototype = {
   create: function ()
   {
     Pong.onePlayer = true;
+
+    // add all the text on the screen
     this.pongText = this.add.bitmapText(this.world.centerX, 50, 'bigFont', 'PONG', 128);
     this.pongText.anchor.set(0.5, 0);
 
+    // on player is selected on start so it get scaled bigger
     this.onePlayerText = this.add.bitmapText(this.world.centerX - 100, 300, 'bigFont', '1 Player', 32);
     this.onePlayerText.anchor.set(0.5);
     this.onePlayerText.scale.set(2);
@@ -46,8 +49,11 @@ Pong.Menu.prototype = {
     {
       if (this.keyIsDown)
         return;
-
+      
+      // only change if the key was not down in the previous frame
       this.keyIsDown = true;
+
+      // scale the correct text based on the new selection
       if (Pong.onePlayer)
       {
         this.onePlayerText.scale.set(1.0);
