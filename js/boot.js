@@ -1,5 +1,5 @@
 var Pong = {
-
+  onePlayer: true
 };
 
 Pong.Boot = function ()
